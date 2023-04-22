@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+}
+
+#container button {
+    width: 80px;
+}
+
+.image {
+  width: 40%;
+}
+
+.none {
+    display: none;
+}
