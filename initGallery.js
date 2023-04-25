@@ -1,4 +1,5 @@
-const images = document.querySelectorAll(".image");
+export function initGallery() {
+  const images = document.querySelectorAll(".image");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 console.log(images.length)
@@ -30,3 +31,5 @@ previous.addEventListener("click", () => {
     images[imageShown].classList.remove("none");
   }
 });
+
+}
