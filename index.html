@@ -4,27 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Gallery app</title>
   </head>
   <body>
-    <div id="container">
-      <button id="previous">Previous</button>
-      <img
-        src="images//313-1604736380-1753884722-640x360.jpeg"
-        alt=""
-        class="image"
-      />
-      <img src="images/maxresdefault.jpg" alt="" class="image" />
-      <img src="images/RDR2_Screenshot-076.jpg" alt="" class="image" />
-      <img
-        src="images/red-dead-redemption-2-pc-screenshots-17.jpg"
-        alt=""
-        class="image"
-      />
-      <button id="next">Next</button>
-    </div>
+    <section class="section">
+      <div class="container">
+        <button id="previous">
+          <img class="arrow" src="./images/user/left-arrow.png" alt="" />
+        </button>
+        <img
+          src="images//313-1604736380-1753884722-640x360.jpeg"
+          alt=""
+          class="image"
+        />
+        <img src="images/maxresdefault.jpg" alt="" class="image" />
+        <img src="images/RDR2_Screenshot-076.jpg" alt="" class="image" />
+        <img
+          src="images/red-dead-redemption-2-pc-screenshots-17.jpg"
+          alt=""
+          class="image"
+        />
+        <button id="next">
+          <img class="arrow" src="./images/user/right-arrow.png" alt="" />
+        </button>
+        <div class="likes">
+          <button id="like">
+            <img src="./images/user/like.png" alt="Like" />
+          </button>
+          <div id="likesCounter">0</div>
+          <button id="dislike">
+            <img src="./images/user/dislike.png" alt="dislike" />
+          </button>
+        </div>
+      </div>
+    </section>
 
-    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

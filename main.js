@@ -1,4 +1,5 @@
-import './style.css'
-import {initGallery } from './initGallery.js'
+import './styles/main.css'
+import {initGallery } from './js/initGallery.js'
+
 
 initGallery()

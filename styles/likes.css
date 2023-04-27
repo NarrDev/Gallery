@@ -1,0 +1,15 @@
+#like, #dislike {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+#like img,
+#dislike img {
+  width: 30px;
+  height: auto;
+}
+
+.likes {
+  position: relative;
+  right: 50px;
+}
