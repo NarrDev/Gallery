@@ -8,6 +8,8 @@ export function initGallery() {
   const previous = document.getElementById("previous");
   const next = document.getElementById("next");
 
+  const bulletpoints = document.querySelector(".bulletpoints");
+
   const images = [];
   for (let i = 0; i < imagesSrc.length; i++) {
     images.push({
@@ -31,33 +33,41 @@ export function initGallery() {
 
   dislike.addEventListener("click", () => {
     images[imageShown].likes--;
-
     updateLikes();
   });
 
+  function goToImage(numberOfImage) {
+    images[imageShown].image.classList.add("none");
+    imageShown = numberOfImage;
+    images[imageShown].image.classList.remove("none");
+    updateLikes();
+  }
+
   next.addEventListener("click", () => {
     if (imageShown + 1 < images.length) {
-      images[imageShown].image.classList.add("none");
-      imageShown++;
-      images[imageShown].image.classList.remove("none");
+      goToImage(imageShown + 1);
     } else {
-      images[imageShown].image.classList.add("none");
-      imageShown = 0;
-      images[imageShown].image.classList.remove("none");
+      goToImage(0);
     }
-    updateLikes();
   });
 
   previous.addEventListener("click", () => {
     if (imageShown < 1) {
-      images[imageShown].image.classList.add("none");
-      imageShown = images.length - 1;
-      images[imageShown].image.classList.remove("none");
+      goToImage(images.length - 1);
     } else {
-      images[imageShown].image.classList.add("none");
-      imageShown--;
-      images[imageShown].image.classList.remove("none");
+      goToImage(imageShown - 1);
     }
-    updateLikes();
   });
+  for (let i = 0; i < images.length; i++) {
+    const button = document.createElement("button");
+    button.className = "bulletpoint";
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".bulletpoint").forEach((element) => {
+        element.classList.remove("active");
+      });
+      button.classList.add("active");
+      goToImage(i);
+    });
+    bulletpoints.appendChild(button);
+  }
 }

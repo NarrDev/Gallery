@@ -1,82 +1,97 @@
 .section {
-    padding-top: 300px;
-    display: flex;
-  }
-  
-  .image {
-    width: auto;
-    height: 540px;
-    border: 4px solid black;
-  }
-  
-  .container {
-    display: flex;
-    margin: 0px auto;
-    align-items: center;
-  }
-  
-  #previous,
-  #next {
-    width: 80px;
-    border: 0;
-    color: white;
-    height: 100%;
-  }
-  
-  #previous {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    position: relative;
-    left: 80px;
-  }
-  #previous:hover {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.9) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  #previous:active {
-      background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  
-  #next {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 1) 60%
-    );
-    position: relative;
-    right: 80px;
-  }
-  #next:hover {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.9) 60%
-    );
-  }
-  #next:active {
-      background: rgb(255, 255, 255);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(0, 0, 0, 0.8) 60%
-      );
-    }
-  
-  .arrow {
-    width: 30px;
-  }
+  padding-top: 300px;
+  display: grid;
+}
+
+.image {
+  width: auto;
+  height: 540px;
+  border: 4px solid black;
+}
+
+.container {
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+}
+
+#previous,
+#next {
+  width: 80px;
+  border: 0;
+  color: white;
+  height: 100%;
+}
+
+#previous {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: relative;
+  left: 80px;
+}
+#previous:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+#previous:active {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+#next {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 60%
+  );
+  position: relative;
+  right: 80px;
+}
+#next:hover {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.9) 60%
+  );
+}
+#next:active {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.8) 60%
+  );
+}
+
+.arrow {
+  width: 30px;
+}
+.bulletpoint {
+  border: 0;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  background-color: rgb(79, 80, 130);
+}
+.bulletpoint.active {
+  background-color: rgb(143, 144, 212);
+}
+.bulletpoints {
+  justify-self: center;
+  margin-top: 10px;
+}
